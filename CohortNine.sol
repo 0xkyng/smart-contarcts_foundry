@@ -14,4 +14,14 @@ contract CohortNine {
     // craeting a new member
     // Member public newMember = Member("pelz", 15);
 
+    // craeting a list of members
+    // using a dynamic array
+    Member[] public listOfMembers;
+
+    // Add members
+    // update the list
+    function addMembers(string memory _name, uint256 _serialNumber) public {
+        listOfMembers.push(Member(_name, _serialNumber));
+    }
+
 }
