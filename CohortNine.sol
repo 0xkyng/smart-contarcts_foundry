@@ -12,6 +12,6 @@ contract CohortNine {
     }
 
     // craeting a new member
-    Member public newMember = Member("pelz", 15);
+    // Member public newMember = Member("pelz", 15);
 
 }
