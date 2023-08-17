@@ -25,7 +25,7 @@ contract CohortNine {
     function addMembers(string memory _name, uint256 _serialNumber) public {
         // Add a member to the array
         listOfMembers.push(Member(_name, _serialNumber));
-        // update the the list
+        // update the list(mapping)
         nameToSerialNumber[_name] = _serialNumber;
     }
 
