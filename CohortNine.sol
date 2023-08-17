@@ -55,4 +55,9 @@ contract CohortNine {
         status = _status;
     }
 
+    // update to a specific enum
+    function evicted() public {
+        status = Status.Evicted;
+    }
+
 }
