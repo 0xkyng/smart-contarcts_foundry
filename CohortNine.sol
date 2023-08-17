@@ -47,4 +47,8 @@ contract CohortNine {
         nameToSerialNumber[_name] = _serialNumber;
     }
 
+    function getEnum() public view returns(Status) {
+        return status;
+    }
+
 }
