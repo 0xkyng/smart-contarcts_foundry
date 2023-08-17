@@ -4,15 +4,13 @@ pragma solidity ^0.8.0;
 
 contract CohortNine {
 
+    uint256 mySerialNumber;
+
     struct Member {
-        uint256 serialNo;
         string name;
+        uint256 serialNumber;
     }
 
-    Member[] public listOfMembers;
+    Member public newMember = Member("pelz", 15);
 
-    function addMember(string memory _name, uint256 serialNo) public {
-        listOfMembers.push(Member(serialNo, _name));
-         _name = "Isaac";
-    }
 }
