@@ -60,4 +60,26 @@ contract CohortNine {
     //     status = Status.Evicted;
     // }
 
+     //----------------------------------------------------------------------------------------------------------------------------
+    // STRUCTS & MAPPINGS
+    struct Student {
+        string name;
+        uint256 age;
+        string sex;
+        string level;
+    }
+
+    mapping (address => Student ) public studentDetails;
+
+
+    function addStudent(string memory _name, uint256 _age, string memory _sex, string memory _level, address user) public   {
+        Student storage newStudent = studentDetails[user];
+        newStudent.name = _name;
+        newStudent.age = _age;
+        newStudent.sex = _sex;
+        newStudent.level = _level;
+        
+    }
+    //-----------------------------------------------------------------------------------------------------------------------------
+
 }
