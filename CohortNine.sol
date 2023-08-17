@@ -18,11 +18,15 @@ contract CohortNine {
     // using a dynamic array
     Member[] public listOfMembers;
 
+    mapping (string => uint256) public nameToSerialNumber;
+
     // Add members
     // update the list
     function addMembers(string memory _name, uint256 _serialNumber) public {
         // Add a member to the array
         listOfMembers.push(Member(_name, _serialNumber));
+        // update the the list
+        nameToSerialNumber[_name] = _serialNumber;
     }
 
 }
