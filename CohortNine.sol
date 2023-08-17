@@ -51,4 +51,8 @@ contract CohortNine {
         return status;
     }
 
+    function setEnum(Status _status) public {
+        status = _status;
+    }
+
 }
