@@ -11,6 +11,7 @@ contract CohortNine {
         uint256 serialNumber;
     }
 
+    // craeting a new member
     Member public newMember = Member("pelz", 15);
 
 }
