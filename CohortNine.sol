@@ -11,6 +11,24 @@ contract CohortNine {
         uint256 serialNumber;
     }
 
+    enum Status {
+        Admitted,
+        Pending,
+        Evicted,
+        Graduated
+    }
+
+    // Default value of the enum is the first element
+    // Listed in the defination of type.
+    Status public status;
+
+    // Enums are zero-based indexed
+    // i.e;
+    // Admitted = 0;
+    // Pending  = 1;
+    // Evicted  = 2;
+    // Graduated = 3;
+
     // craeting a new member
     // Member public newMember = Member("pelz", 15);
 
