@@ -81,6 +81,12 @@ contract CohortNine {
     function getBalance() public view returns (uint) {
         return balances[msg.sender];
     }
+
+    // set balance
+    function setBalance(uint _amount) public returns (uint) {
+        balances[msg.sender] = _amount;
+        return _amount;
+    }
     //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
