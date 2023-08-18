@@ -71,6 +71,18 @@ contract CohortNine {
 
     mapping (address => Student ) public studentDetails;
 
+    //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    // MAPPING
+
+    mapping (address => uint) public balances;
+
+    // get the default balances
+    function getBalance() public view returns (uint) {
+        return balances[msg.sender];
+    }
+    //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 
     function addStudent(string memory _name, uint256 _age, string memory _sex, string memory _level, address user) public   {
         Student storage newStudent = studentDetails[user];
