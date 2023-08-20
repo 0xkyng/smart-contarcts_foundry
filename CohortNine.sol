@@ -120,8 +120,9 @@ contract CohortNine {
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
           // MAPPINGS DETAILED
         mapping (address => uint)balance;
+        mapping (address => mapping(address => bool)) approved;
 
-     function onMappings() public {
+     function onMappings(address spender) public {
       // add element to the map
       balance[msg.sender] = 100;
       // read
@@ -130,6 +131,12 @@ contract CohortNine {
       balance[msg.sender] = 200;
       // delete
       delete balance[msg.sender];
+
+      // NESTED MAPPING 
+      // add
+      approved[msg.sender][spender] = true;
+
+
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
