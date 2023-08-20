@@ -147,4 +147,26 @@ contract CohortNine {
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    // `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+        // STRUCT
+    struct User {
+        address addr;
+        uint score;
+        string name;
+    }
+
+    // Array of struct
+    User[] public users;
+
+    function onStructs(string memory _name, uint _score, address _addr) public {
+        // add user
+        User memory user = User({name: _name, score: _score, addr: msg.sender});
+        // add a user to the array
+        users.push(user2(name: _name, score: _score, addr: msg.sender));
+
+    }
+
+
+    //``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
 }
