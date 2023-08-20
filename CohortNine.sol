@@ -121,6 +121,7 @@ contract CohortNine {
           // MAPPINGS DETAILED
         mapping (address => uint)balance;
         mapping (address => mapping(address => bool)) approved;
+        mapping (address => uint[]) scores;
 
      function onMappings(address spender) public {
       // add element to the map
@@ -136,7 +137,13 @@ contract CohortNine {
       // add
       approved[msg.sender][spender] = true;
 
-
+      // mapping of array
+      //add
+      scores[msg.sender].push(1);
+      // read
+      scores[msg.sender][0];
+      // update
+      scores[msg.sender][0] = 10;
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
